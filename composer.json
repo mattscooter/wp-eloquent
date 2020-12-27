@@ -1,14 +1,18 @@
 {
-    "name": "tareq1988/wp-eloquent",
+    "name": "mattscooter/wp-eloquent",
     "description": "Eloquent ORM for WordPress",
     "keywords": ["wordpress", "plugin", "orm", "eloquent", "sql"],
-    "homepage": "https://github.com/tareq1988/wp-eloquent",
+    "homepage": "https://github.com/mattscooter/wp-eloquent",
     "require": {
-        "illuminate/database": "^5.4",
-        "illuminate/pagination": "^5.4"
+        "illuminate/database": "^8.0",
+        "illuminate/pagination": "^8.0"
     },
     "license": "GPL-2.0-or-later",
     "authors": [
+        {
+          "name": "Matt Kuter",
+          "email": "mkuter@gmail.com"
+        },
         {
             "name": "Tareq Hasan",
             "email": "tareq@wedevs.com"

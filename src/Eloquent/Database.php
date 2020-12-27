@@ -70,10 +70,11 @@ class Database implements ConnectionInterface
      * Begin a fluent query against a database table.
      *
      * @param  string $table
+     * @param  string $as
      *
      * @return \Illuminate\Database\Query\Builder
      */
-    public function table($table)
+    public function table($table, $as = null)
     {
         $processor = $this->getPostProcessor();
 
@@ -469,5 +470,9 @@ class Database implements ConnectionInterface
     public function getConfig($option = null)
     {
         return Arr::get($this->config, $option);
+    }
+
+    public function getDatabaseName(){
+        return DB_NAME;
     }
 }

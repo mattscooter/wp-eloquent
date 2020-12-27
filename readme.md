@@ -1,16 +1,23 @@
 # Eloquent Wrapper for WordPress
 
-This is a library package to use Laravel's [Eloquent ORM](http://laravel.com/docs/5.0/eloquent) with WordPress.
+This is a library package to use Laravel's [Eloquent ORM](https://laravel.com/docs/8.x/eloquent) with WordPress.
 
+It was originally written by tareq1988 and updated to support v8 of Eloquent by mattscooter.
 
 ## Package Installation
 
-To install this package, edit your `composer.json` file:
+This package has not been published to packagist so to install this package, edit your `composer.json` file:
 
 ```js
 {
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/mattscooter/wp-eloquent"
+        }
+    ],
     "require": {
-        "tareq1988/wp-eloquent": "dev-master"
+        "mattscooter/wp-eloquent": "dev-master"
     }
 }
 ```
@@ -122,8 +129,7 @@ Here `users` is the table name **without prefix**. The prefix will be applied au
 
 ### Other Examples
 
- - [Queries](http://laravel.com/docs/5.0/queries)
- - [Eloquent ORM](http://laravel.com/docs/5.0/eloquent)
+ - [Eloquent ORM](https://laravel.com/docs/8.x/eloquent)
 
 ## Writing a Model
 
@@ -175,4 +181,5 @@ var_dump(Post::type('page')->status('publish')->get()->toArray()); // get pages 
  - WordPress 4.0+
 
 ## Author
-[Tareq Hasan](https://tareq.co)
+Original author [Tareq Hasan](https://tareq.co)
+Updates by [Matt Kuter](https://mattkuter.com)

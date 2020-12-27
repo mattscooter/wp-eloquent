@@ -2,6 +2,7 @@
 namespace WeDevs\ORM\Eloquent;
 
 use Illuminate\Database\Eloquent\Model as Eloquent;
+use Illuminate\Support\Str as Str;
 
 /**
  * Model Class
@@ -41,7 +42,7 @@ abstract class Model extends Eloquent {
             return $this->table;
         }
 
-        $table = str_replace( '\\', '', snake_case( str_plural( class_basename( $this ) ) ) );
+        $table = Str::of(str_replace( '\\', '', Str::plural( class_basename( $this ) ) ))->snake() ;
 
         return $this->getConnection()->db->prefix . $table ;
     }
