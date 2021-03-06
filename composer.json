@@ -4,8 +4,9 @@
     "keywords": ["wordpress", "plugin", "orm", "eloquent", "sql"],
     "homepage": "https://github.com/mattscooter/wp-eloquent",
     "require": {
-        "illuminate/database": "^8.0",
-        "illuminate/pagination": "^8.0"
+        "illuminate/database": "^8.31",
+        "illuminate/pagination": "^8.0",
+        "rakit/validation": "^1.4"
     },
     "license": "GPL-2.0-or-later",
     "authors": [
